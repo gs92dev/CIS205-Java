@@ -64,6 +64,26 @@ public class InClassActivites {
         // Task 8: Import the Scanner class and create a Scanner object.
         // Use the Scanner to read an integer, a double, and a string from the
         // user.
-        // Print each value entered by the user.
+        int userInteger;
+        double userDouble;
+        String UserString;
+        ;
+
+        System.out.println("Enter an integer: ");
+        userInteger = userInput.nextInt();
+
+        System.out.println("Enter a double: ");
+        userDouble = userInput.nextDouble();
+        userInput.nextLine();
+        System.out.println("Enter a string: ");
+        UserString = userInput.nextLine();
+
+        // Print each value entered by the user.5
+
+        System.out.println("The integer entered is: " + userInteger);
+        System.out.println("The double entered is: " + userDouble);
+        System.out.println("The string entered is: " + UserString);
+
+        userInput.close();
     }
 }
