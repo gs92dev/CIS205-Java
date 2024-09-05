@@ -49,6 +49,10 @@ public class InClassActivites {
         System.out.println("The area of the rectangle is " + areaOfRectangle + " m^2");
 
         // Task 5: Demonstrate explicit casting from a double to an int.
+        double myDoubleValue = 3.14;
+        System.out.println("Original double value: " + myDoubleValue);
+        System.out.println("Int value " + (int) myDoubleValue);
+
         // Print both the original double value and the casted int value.
         // Task 6: Print a string that includes the following: a tab, a newline,
         // and a double quote.
