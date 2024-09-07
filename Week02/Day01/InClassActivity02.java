@@ -6,7 +6,7 @@
 
 import java.util.Scanner;
 
-public class InClassActivites {
+public class InClassActivity02 {
     public static void main(String[] args) {
         Scanner userInput = new Scanner(System.in);
 
