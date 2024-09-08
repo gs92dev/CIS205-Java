@@ -42,9 +42,11 @@ public class Assignment02 {
         System.out.println("Enter the first number: ");
         num1 = input.nextInt();
         System.out.println("You entered: " + num1);
+
         System.out.println("Enter the second number: ");
         num2 = input.nextInt();
         System.out.println("You entered: " + num2);
+
         num3 = num1;
         num1 = num2;
         num2 = num3;
