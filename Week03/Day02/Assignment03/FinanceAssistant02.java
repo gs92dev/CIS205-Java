@@ -63,14 +63,76 @@ public class FinanceAssistant02 {
 
         if (remainingIncome < 0) {
             System.out.println("You are in debt. You need to save $" + Math.abs(remainingIncome) + " to break even.");
-        } else if (remainingIncome == 0) {
+        } else if (remainingIncome > 0) {
             System.out.println("You are saving $" + remainingIncome + " this month.");
         } else {
-            System.out.println("You are saving $" + remainingIncome + " this month.");
+            System.out.println(remainingIncome + " You are breaking even.");
         }
-
         // close scanner
         input.close();
     }
+    /*
+     * output:
+     * Saving:
+     * Enter your monthly income:
+     * 1000
+     * Enter your monthly rent:
+     * 800
+     * Enter your monthly utilities:
+     * 0
+     * Enter your monthly groceries:
+     * 0
+     * Enter your monthly entertainment:
+     * 0
+     * Monthly income: $1000.0
+     * Rent: $800.0 (80.0%) of your monthly income
+     * Utilities: $0.0 (0.0%) of your monthly income
+     * Groceries: $0.0 (0.0%) of your monthly income
+     * Entertainment: $0.0 (0.0%) of your monthly income
+     * Total expenses: $800.0
+     * Remaining income: $200.0
+     * You are saving $200.0 this month.
+     * 
+     * Debt:
+     * Enter your monthly income:
+     * 1000
+     * Enter your monthly rent:
+     * 800
+     * Enter your monthly utilities:
+     * 200
+     * Enter your monthly groceries:
+     * 600
+     * Enter your monthly entertainment:
+     * 500
+     * Monthly income: $1000.0
+     * Rent: $800.0 (80.0%) of your monthly income
+     * Utilities: $200.0 (20.0%) of your monthly income
+     * Groceries: $600.0 (60.0%) of your monthly income
+     * Entertainment: $500.0 (50.0%) of your monthly income
+     * Total expenses: $2100.0
+     * Remaining income: $-1100.0
+     * You are in debt. You need to save $1100.0 to break even.
+     * 
+     * Even:
+     * Enter your monthly income:
+     * 1500
+     * Enter your monthly rent:
+     * 800
+     * Enter your monthly utilities:
+     * 200
+     * Enter your monthly groceries:
+     * 300
+     * Enter your monthly entertainment:
+     * 200
+     * Monthly income: $1500.0
+     * Rent: $800.0 (53.333333333333336%) of your monthly income
+     * Utilities: $200.0 (13.333333333333334%) of your monthly income
+     * Groceries: $300.0 (20.0%) of your monthly income
+     * Entertainment: $200.0 (13.333333333333334%) of your monthly income
+     * Total expenses: $1500.0
+     * Remaining income: $0.0
+     * 0.0You are breaking even.
+     * 
+     */
 
 }
