@@ -131,7 +131,7 @@ public class FinanceAssistant02 {
      * Entertainment: $200.0 (13.333333333333334%) of your monthly income
      * Total expenses: $1500.0
      * Remaining income: $0.0
-     * 0.0You are breaking even.
+     * 0.0 You are breaking even.
      * 
      */
 
