@@ -19,7 +19,8 @@ public class Assignment04 {
 
                 // ------------------ Output variables ------------------
                 final double EPSILON = 1e-9; // Small tolerance value for comparing doubles
-                double hypotenuse, cathetus1, cathetus2, squaredHypotenuse, squaredCathetus1, squaredCathetus2;
+                double hypotenuse, cathetus1, cathetus2, squaredHypotenuse, squaredCathetus1, squaredCathetus2,
+                                summedSquaredCathetus;
                 boolean rightTriangle;
 
                 // ------------------ User inputs ------------------
@@ -34,14 +35,12 @@ public class Assignment04 {
 
                 // ------------------ Comparing doubles ------------------
 
-                // boolean side = (Math.abs(side1 - side2) < EPSILON);
-                // System.out.println(side);
                 // ------------------ Verify the longest side ------------------
-                if ((Math.abs(side1 - side2) < EPSILON) && (Math.abs(side1 - side3) < EPSILON)) {
+                if ((side1 > side2) && (side1 > side3)) {
                         hypotenuse = side1;
                         cathetus1 = side2;
                         cathetus2 = side3;
-                } else if ((Math.abs(side2 - side1) < EPSILON) && (Math.abs(side2 - side3) < EPSILON)) {
+                } else if ((side2 > side1) && (side2 > side3)) {
                         hypotenuse = side2;
                         cathetus1 = side1;
                         cathetus2 = side3;
@@ -61,7 +60,12 @@ public class Assignment04 {
                 squaredCathetus1 = cathetus1 * cathetus1;
                 squaredCathetus2 = cathetus2 * cathetus2;
 
-                rightTriangle = squaredHypotenuse == (squaredCathetus1 + squaredCathetus2);
+                summedSquaredCathetus = squaredCathetus1 + squaredCathetus2;
+
+                System.out.println("The difference between the squared number is: "
+                                + Math.abs(squaredHypotenuse - summedSquaredCathetus));
+
+                rightTriangle = (Math.abs(squaredHypotenuse - summedSquaredCathetus) < EPSILON);
 
                 if (rightTriangle) {
                         // ------------------ Output ------------------
@@ -77,7 +81,31 @@ public class Assignment04 {
 
         /*
          * output:
+         * Not a right triangle:
+         * Enter the first side of the triangle:
+         * 7.3
+         * Enter the second side of the triangle:
+         * 2.5
+         * Enter the third side of the triangle:
+         * 6.8
+         * The hypotenuse is: 7.3
+         * The cathetus 1 is: 2.5
+         * The cathetus 2 is: 6.8
+         * The difference between the squared number is: 0.8000000000000043
+         * The triangle is not a right triangle.
          * 
+         * Is a right triangle:
+         * Enter the first side of the triangle:
+         * 1.5
+         * Enter the second side of the triangle:
+         * 2.0
+         * Enter the third side of the triangle:
+         * 2.5
+         * The hypotenuse is: 2.5
+         * The cathetus 1 is: 1.5
+         * The cathetus 2 is: 2.0
+         * The difference between the squared number is: 0.0
+         * The triangle is a right triangle.
          * 
          * 
          */
