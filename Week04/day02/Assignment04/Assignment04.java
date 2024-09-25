@@ -5,7 +5,7 @@ import java.util.Scanner;
 /*
  * Guilherme dos Santos
  * Assignment 04 - right triangle
- * 09/12/2024
+ * 09/21/2024
  */
 
 public class Assignment04 {
