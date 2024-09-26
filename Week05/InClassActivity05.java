@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class InClassActivity05 {
 
     public static void main(String[] args) {
@@ -27,7 +29,8 @@ public class InClassActivity05 {
         // Task 3: re-populate the array numbers with values randomly created in the
         // range of 1 to 100
         // print the array using enhanced for loop
-        // Random random = new Random();
+        Random random = new Random();
+
         // 1- Populate the array elements with random values in the range of 1 to 100
         // using a for loop
         // 2 -Print the array using an enhanced for loop
