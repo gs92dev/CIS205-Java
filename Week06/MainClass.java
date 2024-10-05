@@ -16,8 +16,7 @@ public class MainClass {
         System.out.println(Character.isDigit(c2)); // check if c2 is a digit
         System.out.println(Character.isLetter(c2)); // check if c2 is a letter
         System.out.println(Character.isLetterOrDigit(c3)); // check if c3 is a letter or a digit
-        // System.out.println(Character.isSpecial(c3)); // check if c3 is a special
-        // character
+
         // ------------------------------------------------------------------------
 
         // Task 2:
@@ -36,10 +35,10 @@ public class MainClass {
         System.out.println("The first z character is at index: " + sentence.indexOf("z"));
 
         // Q4: what character is at index 33
-        System.out.println("Character at index 33: " + sentence.charAt(+33));
+        System.out.println("Character at index 33: " + sentence.charAt(33));
 
         // Q5: does sentence end with "ion"?
-        System.out.println("sentence variable start with \"the\": " + sentence.endsWith("ion"));
+        System.out.println("sentence variable ends with \"ion\": " + sentence.endsWith("ion"));
 
         // Q6: does sentence start with with "the"?
         System.out.println("sentence variable start with \"the\": " + sentence.startsWith("the"));
@@ -47,8 +46,8 @@ public class MainClass {
         // Q7: extract "internationalization of intergovernmental" from sentence, store
         // it in a variable and print it
         /* add your code here */
-        String extracted = sentence.substring(4, 45);
-        System.out.println("Extracted sentence: " + extracted);
+        String extractedSentence = sentence.substring(4, 45);
+        System.out.println("Extracted sentence: " + extractedSentence);
 
         // ------------------------------------------------------------------------
 
@@ -59,6 +58,7 @@ public class MainClass {
         // compare the content of name1 & name2 (case sensitive & not case sensitive)
         System.out.println("name1 variable equals name2 variable (case sensitive): " + name1.equals(name2)); // case
                                                                                                              // sensitive
+
         System.out
                 .println("name1 variable equals name2 variable (not case sensitive): " + name1.equalsIgnoreCase(name2)); // not
                                                                                                                          // case
@@ -98,8 +98,10 @@ public class MainClass {
 
         // Q5: explain what is the different between the size(length) of a string
         // builder and the capacity
-
-        System.out.println(/* add your code here */);
+        // The size is the length of the actual string stored in the variable, while the
+        // capacity is the space in memory allocated for the string builder object, when
+        // we create a StringBuilder Java by default allocate extra space in the memory
+        // in case we wang to add more to our string.
         // ------------------------------------------------------------------------
 
     }

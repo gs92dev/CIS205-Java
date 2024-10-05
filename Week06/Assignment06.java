@@ -2,7 +2,7 @@
 /*
  * Guilherme dos Santos
  * Assignment 06
- * 10/03/2024
+ * 10/05/2024
  */
 import java.util.Scanner;
 
