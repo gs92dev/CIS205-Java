@@ -2,6 +2,7 @@
 /*
  * Guilherme dos Santos
  * Assignment 06
+ * Search for a character in a string
  * 10/05/2024
  */
 import java.util.Scanner;
