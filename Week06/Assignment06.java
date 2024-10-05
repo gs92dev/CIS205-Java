@@ -10,30 +10,62 @@ public class Assignment06 {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
-        String sentence, searchChar;
+
+        // Variables declaration
+        String string, searchChar;
         char searchCharConverted;
         int counter = 0;
 
-        System.out.println("Enter a sentence: ");
-        sentence = input.nextLine();
+        // Input string from user
+        System.out.println("Enter a string: ");
+        string = input.nextLine();
 
+        // Input character to search from user
         System.out.println("Enter a character to search: ");
         searchChar = input.nextLine();
-        searchCharConverted = searchChar.charAt(0);
 
-        if (sentence.length() > 0 && sentence != null) {
-            for (int i = 0; i < sentence.length(); i++) {
-                if (sentence.charAt(i) == searchCharConverted) {
+        // Basic validation for the input
+        Boolean stringValidation = string.length() > 0 && string != null;
+        Boolean CharValidation = searchChar.length() > 0 && searchChar != null;
+
+        // If the string and the character are not empty or null
+        if (stringValidation && CharValidation) {
+            searchCharConverted = searchChar.charAt(0);
+            for (int i = 0; i < string.length(); i++) {
+                if (string.charAt(i) == searchCharConverted) {
+                    /// using case sensitive
                     counter++;
                 }
             }
+
+            System.out.println(
+                    "The character \"" + searchCharConverted + "\" appears " + counter + " times in the string.");
         } else {
-            System.out.println("The sentence is empty or null.");
+            System.out.println("The string or the character is empty or null.");
         }
 
-        System.out.println("The character " + searchCharConverted + " appears " + counter + " times in the sentence.");
-
-        input.close();
+        input.close(); // close the scanner
     }
+    /*
+     * output:
+     * Enter a string:
+     * santos
+     * Enter a character to search:
+     * s
+     * The character "s" appears 2 times in the string.
+     * Empty char
+     * Enter a string:
+     * santos
+     * Enter a character to search:
+     * 
+     * The string or the character is empty or null.
+     * 
+     * empty string
+     * Enter a string:
+     * 
+     * Enter a character to search:
+     * s
+     * The string or the character is empty or null.
+     */
 
 }
