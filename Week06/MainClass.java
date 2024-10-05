@@ -104,6 +104,30 @@ public class MainClass {
         // in case we wang to add more to our string.
         // ------------------------------------------------------------------------
 
+        /*
+         * output:
+         * A
+         * false
+         * false
+         * true
+         * false
+         * false
+         * The length in the sentence variable: 126
+         * Number of words in the sentence variable: 11
+         * The first z character is at index: 18
+         * Character at index 33: g
+         * sentence variable ends with "ion": true
+         * sentence variable start with "the": false
+         * Extracted sentence: internationalization of intergovernmental
+         * name1 variable equals name2 variable (case sensitive): false
+         * name1 variable equals name2 variable (not case sensitive): true
+         * num1 variable converted to string: 12
+         * num2 variable converted to string: 12.00009
+         * The size of the stringBuilder object: 20
+         * The capacity of the stringBuilder object: 36
+         * Name with ID number: Guilherme dos Santos 00985562
+         */
+
     }
 
 }
