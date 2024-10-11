@@ -76,4 +76,28 @@ public class Assignment7 {
         input.close();
     }
 
+    /*
+     * Output:
+     * Not a right triangle:
+     * Enter the first side of the triangle:
+     * 7.3
+     * Enter the second side of the triangle:
+     * 2.5
+     * Enter the third side of the triangle:
+     * 6.8
+     * The sides are: 7.3, 2.5, 6.8
+     * The triangle is not a right triangle.
+     * 
+     * Is a right triangle:
+     * Enter the first side of the triangle:
+     * 1.5
+     * Enter the second side of the triangle:
+     * 2.0
+     * Enter the third side of the triangle:
+     * 2.5
+     * The sides are: 1.5, 2.0, 2.5
+     * The triangle is a right triangle.
+     * 
+     */
+
 }
