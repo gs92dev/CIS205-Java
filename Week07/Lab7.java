@@ -18,11 +18,13 @@ public class Lab7 {
     }
 
     public static double calculateTax(double total) {
-        return total * 0.09;
+        double tax = total * 0.09;
+        return tax;
     }
 
     public static double calculateTip(double total) {
-        return total * 0.2;
+        double tip = total * 0.2;
+        return tip;
     }
 
     public static void printReceipt(String[] itemsName, double[] itemsPrice, double total, double tax, double tip) {
@@ -36,13 +38,15 @@ public class Lab7 {
         }
 
         System.out.println();
+        System.out.printf("Cost of Food: $%.2f\n", total);
 
-        System.out.println("Cost of Food: $" + total);
-        System.out.println("Tax (9%): $" + tax);
-        System.out.println("Tip (20%): $" + tip);
-        System.out.println(
-                "----------------------------");
-        System.out.println("Total: $" + (total + tax + tip));
+        System.out.printf("Tax (9%%): $%.2f\n", tax);
+        System.out.printf("Tip (20%%): $%.2f\n", tip);
+
+        System.out.println("----------------------------");
+        System.out.println();
+
+        System.out.printf("Total: $%.2f\n", total + tax + tip);
 
     }
 
@@ -79,5 +83,60 @@ public class Lab7 {
         input.close();
 
     }
+
+    /*
+     * Output:
+     * Please, Enter the number of items ordered by the table:
+     * 3
+     * Enter the name of the item: 1
+     * Burger
+     * Enter the price of the item: 1
+     * 10.99
+     * Enter the name of the item: 2
+     * Salad
+     * Enter the price of the item: 2
+     * 7.49
+     * Enter the name of the item: 3
+     * Soda
+     * Enter the price of the item: 3
+     * 1.99
+     * Restaurant Receipt
+     * ----------------------------
+     * Items Details:
+     * 1. Burger - $10.99
+     * 2. Salad - $7.49
+     * 3. Soda - $1.99
+     * 
+     * Cost of Food: $20.47
+     * Tax (9%): $1.84
+     * Tip (20%): $4.09
+     * ----------------------------
+     * 
+     * Total: $26.41
+     * 
+     * Output2:
+     * Please, Enter the number of items ordered by the table:
+     * 2
+     * Enter the name of the item: 1
+     * Pizza
+     * Enter the price of the item: 1
+     * 15.99
+     * Enter the name of the item: 2
+     * Soda
+     * Enter the price of the item: 2
+     * 5.60
+     * Restaurant Receipt
+     * ----------------------------
+     * Items Details:
+     * 1. Pizza - $15.99
+     * 2. Soda - $5.6
+     * 
+     * Cost of Food: $21.59
+     * Tax (9%): $1.94
+     * Tip (20%): $4.32
+     * ----------------------------
+     * 
+     * Total: $27.85
+     */
 
 }
