@@ -1,3 +1,9 @@
+/*
+ * Guilherme dos Santos
+ * Lab 8
+ * 10/26/2024
+ */
+
 public class Astronaut {
 
     private String name;
@@ -74,4 +80,27 @@ public class Astronaut {
         System.out.println(astronaut3);
 
     }
+
+    /*
+     * Output:
+     * Astronaut 1:
+     * Name: TBD
+     * Weight: 200.0
+     * Position: Crew
+     * 
+     * Astronaut 2:
+     * Name: Togar
+     * Weight: 200.0
+     * Position: Crew
+     * 
+     * Astronaut 3:
+     * Name: llana
+     * Weight: 113.2
+     * Position: Crew
+     * 
+     * Astronaut 3:
+     * Name: llana
+     * Weight: 113.2
+     * Position: Commander
+     */
 }
