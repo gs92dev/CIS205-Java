@@ -1,6 +1,6 @@
 /*
  * Guilherme dos Santos
- * 10/31/2024
+ * 11/02/2024
  * In class Activity 9
  */
 
@@ -23,7 +23,16 @@ public class Car {
         this.brand = "Unknown";
         this.model = "Unknown";
         this.fuelType = fuelType; // this is a "MUST implemented" step, why?
-        // Because it is a final variable and the type of fuel is not gonna change
+        // Because it is a final variable and the type of fuel is not gonna change in
+        // the future
+        this.currentSpeed = 0; // Start with zero speed
+    }
+
+    // Overload Constructor
+    public Car(String brand, String model, String fuelType) {
+        this.brand = brand;
+        this.model = model;
+        this.fuelType = fuelType;
         this.currentSpeed = 0; // Start with zero speed
     }
 
@@ -89,4 +98,23 @@ public class Car {
         Car car2 = new Car("BMW", "X5", "Diesel");
         car2.displayInfo(true);
     }
+
+    /*
+     * output:
+     * Car: Honda Accord
+     * Current Speed: 120 km/h
+     * Maximum Speed: 200 km/h
+     * Fuel Type: Gasoline
+     * Car: BMW X5
+     * Current Speed: 0 km/h
+     * Maximum Speed: 200 km/h
+     * Maximum Speed: 200 km/h
+     * Fuel Type: Diesel
+     * Maximum Speed: 200 km/h
+     * Maximum Speed: 200 km/h
+     * Maximum Speed: 200 km/h
+     * Maximum Speed: 200 km/h
+     * Fuel Type: Diesel
+     * Additional Details: coming soon
+     */
 }
