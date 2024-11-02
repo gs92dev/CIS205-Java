@@ -84,6 +84,12 @@ public class Assignment09 {
         Person person = new Person().setFirstName("Jane").setLastName("Smith");
         System.out.println("The first and last name are: " + person);
 
+        // Test the search method
+        int[] arr = { 1, 2, 3, 4, 5 };
+        System.out.println("Index: " + Search.search(arr, 3));
+        double[] arr2 = { 1.1, 2.2, 3.3, 4.4, 5.5 };
+        System.out.println("Index: " + Search.search(arr2, 4.4));
+
     }
 
     /*
