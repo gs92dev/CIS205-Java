@@ -13,15 +13,16 @@ import java.io.IOException;
 public class Assignment10 {
 
     public static void main(String[] args) {
+
         File file = new File("file.json");
+        StringBuilder contentBuilder = new StringBuilder();
+        String line;
 
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
-            StringBuilder contentBuilder = new StringBuilder();
-            String line;
 
             while ((line = reader.readLine()) != null) {
                 contentBuilder.append(line);
-                contentBuilder.append(System.lineSeparator());
+                contentBuilder.append("\n");
 
             }
 
