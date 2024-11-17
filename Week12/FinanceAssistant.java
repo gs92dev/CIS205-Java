@@ -14,16 +14,18 @@ public class FinanceAssistant {
                 // ------------------ Variables ------------------
                 // input variables
 
-                double monthlyIncome, rent, utilities, groceries, entertainment;
+                double monthlyIncome;
                 int categories;
-                double totalExpenses = 0;
                 ArrayList<String> expenseCategories = new ArrayList<String>();
                 ArrayList<Double> expenseAmounts = new ArrayList<Double>();
 
                 // ----- output variables
 
-                double remainingIncome, rentPercentage, utilitiesPercentage, groceriesPercentage,
-                                entertainmentPercentage;
+                double remainingIncome;
+                double totalExpenses = 0;
+
+                System.out.println("\nWelcome to the Finance Assistant!");
+                System.out.println("");
 
                 // ---------------------- input-----------------------
 
@@ -44,20 +46,9 @@ public class FinanceAssistant {
                         expenseAmounts.add(input.nextDouble());
                 }
 
-                // System.out.println("Enter your monthly rent: ");
-                // rent = input.nextDouble();
+                // ------------------ Calculations and Output ------------------
 
-                // System.out.println("Enter your monthly utilities: ");
-                // utilities = input.nextDouble();
-
-                // System.out.println("Enter your monthly groceries: ");
-                // groceries = input.nextDouble();
-
-                // System.out.println("Enter your monthly entertainment: ");
-                // entertainment = input.nextDouble();
-
-                // ------------------ Calculations ------------------
-                //
+                System.out.println("Monthly income: $" + monthlyIncome);
 
                 for (int i = 0; i < expenseAmounts.size(); i++) {
                         totalExpenses += expenseAmounts.get(i);
@@ -67,55 +58,48 @@ public class FinanceAssistant {
                         System.out.println(expenseCategories.get(i) + ": $" + expenseAmounts.get(i) + " ("
                                         + (expenseAmounts.get(i) / monthlyIncome) * 100 + "%) of your monthly income");
                 }
-                // // rent percentage
-                // rentPercentage = (rent / monthlyIncome) * 100;
-                // // utilities percentage
-                // utilitiesPercentage = (utilities / monthlyIncome) * 100;
-                // // groceries percentage
-                // groceriesPercentage = (groceries / monthlyIncome) * 100;
-                // // entertainment percentage
-                // entertainmentPercentage = (entertainment / monthlyIncome) * 100;
 
                 remainingIncome = monthlyIncome - totalExpenses;
 
-                // ------------------ Output ------------------
-                // System.out.println("Monthly income: $" + monthlyIncome);
-                // System.out.println("Rent: $" + rent + " (" + rentPercentage + "%) of your
-                // monthly income");
-                // System.out.println(
-                // "Utilities: $" + utilities + " (" + utilitiesPercentage + "%) of your monthly
-                // income");
-                // System.out.println("Groceries: $" + groceries + " (" + groceriesPercentage
-                // + "%) of your monthly income");
-                // System.out.println(
-                // "Entertainment: $" + entertainment + " (" + entertainmentPercentage
-                // + "%) of your monthly income");
-
-                System.out.println("Total expenses: $" + totalExpenses);
-                System.out.println("Remaining income: $" + remainingIncome);
+                System.out.println("Total expenses: $" + String.format("%.2f", totalExpenses));
+                System.out.println("Remaining income: $" + String.format("%.2f", remainingIncome));
 
                 // close scanner
                 input.close();
         }
         /*
          * Output:
+         * 
+         * Welcome to the Finance Assistant!
+         * 
          * Enter your monthly income:
          * 1000
-         * Enter your monthly rent:
-         * 500
-         * Enter your monthly utilities:
-         * 100
-         * Enter your monthly groceries:
-         * 85
-         * Enter your monthly entertainment:
-         * 55
+         * Enter the number of categories:
+         * 4
+         * Number of categories: 4
+         * Enter the name of the category:
+         * Rent
+         * Enter the name of the category:
+         * Utitlities
+         * Enter the name of the category:
+         * Groceries
+         * Enter the name of the category:
+         * Entertainment
+         * Enter the amount for Rent:
+         * 505
+         * Enter the amount for Utitlities:
+         * 202.6
+         * Enter the amount for Groceries:
+         * 120.5
+         * Enter the amount for Entertainment:
+         * 35.9
          * Monthly income: $1000.0
-         * Rent: $500.0 (50.0%) of your monthly income
-         * Utilities: $100.0 (10.0%) of your monthly income
-         * Groceries: $85.0 (8.5%) of your monthly income
-         * Entertainment: $55.0 (5.5%) of your monthly income
-         * Total expenses: $740.0
-         * Remaining income: $260.0
+         * Rent: $505.0 (50.5%) of your monthly income
+         * Utitlities: $202.6 (20.26%) of your monthly income
+         * Groceries: $120.5 (12.049999999999999%) of your monthly income
+         * Entertainment: $35.9 (3.5900000000000003%) of your monthly income
+         * Total expenses: $864.00
+         * Remaining income: $136.00
          */
 
 }
