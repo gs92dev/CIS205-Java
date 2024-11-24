@@ -6,7 +6,7 @@
  * Assignment BMI Calculator
  * Add the name of the assignment
  * 
- * add a description for the project here
+ * add a description for the project here:
  * The BMI Calculator is a program that calculates the Body Mass Index (BMI) of a person based on their weight and height in kilograms and meters.
  * The program allows the user to calculate the BMI multiple times and displays the health status of the person each time.
  */
