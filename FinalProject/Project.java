@@ -1,5 +1,10 @@
 /*
  * Name: Guilherme dos Santos
+ * 12/08/2024
+ * Simple Linear Regression
+ * 
+ * With this model we have two sets of values and we use them to
+ * make a linear regression and predict future outcomes
 */
 
 public class Project {
